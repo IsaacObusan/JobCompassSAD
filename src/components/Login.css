@@ -1,0 +1,157 @@
+/* Login.css */
+
+body.login-page {
+  background-image: url('tmp_bg.png'); /* Correct path */
+  background-size: cover;
+  background-position: center center;
+}
+
+.login-container {
+  height: 100vh; /* Full viewport height */
+  display: flex; /* Flexbox for centering */
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
+  color: rgb(10, 9, 9); /* Change text color to better visibility */
+  padding: 20px; /* Padding around the container */
+  font-size: 1.2rem; /* Increase font size for text in the container */
+  flex-direction: column; /* Stack elements vertically */
+}
+
+.logo { 
+  display: block; /* Make the logo a block element */
+  margin: 0 auto; /* Center the logo horizontally */
+  transform: translateX(-25px); /* Adjust the position slightly to the left */
+  max-width: 100%; /* Set a smaller maximum width for the logo */
+  height: auto; /* Maintain the aspect ratio */
+}
+
+
+
+
+.login-form {
+  background-color: rgba(208, 225, 233, 0.8); /* Semi-transparent dark background */
+  padding: 2rem; /* Padding for form */
+  border-radius: 0.9rem; /* Rounded corners */
+  box-shadow: 0 10px 15px rgba(147, 139, 139, 0.2); /* Shadow effect */
+  width: 70%; /* Ensure the form doesn't exceed the width */
+  max-width: 400px; /* Set a max width for better responsiveness */
+}
+
+.login-form h2 {
+  font-size: 2rem; /* Font size for the heading */
+  margin-bottom: 1rem; /* Margin below the heading */
+  text-align: center; /* Center the heading */
+}
+
+.login-form label {
+  display: block; /* Block display for labels */
+  margin-bottom: 0.9rem; /* Margin below labels */
+}
+
+.login-form input {
+  width: 100%; /* Full width for input fields */
+  padding: 0.5rem; /* Padding for input fields */
+  border-radius: 0.25rem; /* Rounded corners for inputs */
+  border: 1px solid #2a9785; /* Add a border for better visibility */
+}
+
+.login-form button {
+  width: 30%; /* Set width for the button */
+  background-color: #3c9add; /* Button background color */
+  color: white; /* White text color */
+  padding: 0.6rem; /* Padding for button */
+  border-radius: 0.40rem; /* Rounded corners */
+  margin: 1rem 0 0; /* Adjust top margin to move button downward */
+  transition: background-color 0.3s; /* Transition for hover effect */
+  border: none; /* Remove default border */
+  display: block; /* Make the button block-level */
+  margin-left: auto; /* Center the button horizontally */
+  margin-right: auto; /* Center the button horizontally */
+  font-size: 1.2rem; /* Set a larger font size for the button text */
+}
+
+.login-form button:hover {
+  background-color: #1b4d6e; /* Darker color on hover */
+}
+
+.user-type {
+  display: flex; /* Use flexbox for horizontal layout */
+  justify-content: space-around; /* Space out the radio buttons */
+  margin-bottom: 1rem; /* Add some space below the radio buttons */
+}
+
+.user-type label {
+  display: flex; /* Make labels flexible */
+  align-items: center; /* Center items vertically */
+  cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+.sign-up-caption {
+  text-align: center; /* Center the caption */
+  margin-bottom: 1rem; /* Space below the caption */
+  font-size: 1rem; /* Font size for the caption */
+  color: rgb(10, 9, 9); /* Change text color for better visibility */
+}
+
+.sign-up-link {
+  color: #25a6aa; /* Color for the sign-up link */
+  cursor: pointer; /* Change cursor to pointer */
+  font-weight: bold; /* Highlight the sign-up text */
+  text-decoration: underline; /* Underline for emphasis */
+}
+
+.sign-up-link:hover {
+  color: #117468; /* Darker color on hover */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .login-container {
+    padding: 10px; /* Less padding on smaller screens */
+    font-size: 1rem; /* Decrease font size for better readability */
+  }
+
+  .login-form {
+    padding: 2rem; /* Decrease padding for form */
+  }
+
+  .login-form h2 {
+    font-size: 1.5rem; /* Decrease heading font size */
+  }
+
+  .login-form button {
+    width: 80%; /* Increase button width on small screens */
+    font-size: 1rem; /* Decrease button font size */
+  }
+}
+
+/* Responsive Styles for Logo */
+@media (max-width: 768px) {
+  .logo {
+    width: 60%; /* Adjust width for medium screens */
+    margin: 0 auto; /* Center the logo */
+  }
+}
+
+@media (max-width: 480px) {
+  .logo {
+    width: 50%; /* Further adjust width for smaller screens */
+    margin: 0 auto; /* Center the logo */
+  }
+
+}
+
+@media (max-width: 480px) {
+  .login-form {
+    padding: 1.5rem; /* Further decrease padding for very small screens */
+  }
+
+  .login-form h2 {
+    font-size: 1.3rem; /* Further decrease heading font size */
+  }
+
+  .login-form button {
+    width: 100%; /* Full width for button on small screens */
+    font-size: 0.9rem; /* Decrease button font size */
+  }
+}

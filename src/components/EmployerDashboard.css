@@ -1,0 +1,101 @@
+.dashboard {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-color: #f9f9f9; /* Light background color */
+    min-height: 100vh; /* Full height for the dashboard */
+}
+
+.header {
+    display: flex;
+    align-items: center; /* Center items vertically */
+    background-color: #25a6aa; /* Green background for the header */
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.logo {
+    height: 120px; /* Adjust height as needed */
+    margin-right: 20px; /* Space between logo and tabs */
+}
+
+.tabs {
+    display: flex;
+    margin-left: auto; /* Push tabs to the right */
+}
+
+.tab {
+    background: none;
+    border: none;
+    color: white; /* White text color */
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.tab:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Light hover effect */
+}
+
+.active {
+    border-bottom: 2px solid white; /* Indicator for active tab */
+}
+
+.main-content {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: white; /* White background for content */
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+}
+
+.content {
+    font-size: 16px;
+    color: #333; /* Dark text color for readability */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column; /* Stack items vertically */
+        align-items: flex-start; /* Align items to the start */
+    }
+
+    .tabs {
+        flex-wrap: wrap; /* Allow tabs to wrap */
+        justify-content: flex-start; /* Align tabs to the start */
+        width: 100%; /* Make tabs full width */
+        margin-top: 10px; /* Space between header and tabs */
+    }
+
+    .tab {
+        padding: 10px 15px; /* Reduce padding for smaller screens */
+        font-size: 14px; /* Smaller font size for tabs */
+    }
+
+    .main-content {
+        padding: 15px; /* Reduce padding for content */
+    }
+
+    .content {
+        font-size: 14px; /* Smaller font size for content */
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        padding: 10px; /* Less padding for smaller screens */
+    }
+
+    .tab {
+        padding: 8px 10px; /* Further reduce padding for tabs */
+        font-size: 12px; /* Further reduce font size for tabs */
+    }
+
+    .main-content {
+        padding: 10px; /* Further reduce padding for content */
+    }
+
+    .content {
+        font-size: 12px; /* Further reduce font size for content */
+    }
+}
