@@ -101,7 +101,7 @@ const CreateAccountForm: React.FC = () => {
                 required
             />
 
-            <button type="submit">Submit</button>
+            <button type="submit">Create Account</button>
         </form>
     );
 };
