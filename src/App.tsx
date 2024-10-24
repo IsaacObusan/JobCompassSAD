@@ -1,9 +1,11 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Login from './components/Login';
-import LandingPage from './components/LandingPage';  // Import the LandingPage component
-import CreateAccountForm from './components/CreateAccountForm';  // Import CreateAccountForm component
-import EmployerDashboard from './components/EmployerDashboard';  // Import EmployerDashboard component
+import LandingPage from './components/LandingPage';  
+import CreateAccountForm from './components/CreateAccountForm';  
+import SignupForm from './components/SignupForm';  
+import EmployerDashboard from './components/EmployerDashboard';  
+import TabContainer from './components/TabContainer';  // Import TabContainer
 
 const App: React.FC = () => {
   return (
@@ -11,7 +13,7 @@ const App: React.FC = () => {
       <Routes>
         <Route path="/" element={<Login />} /> {/* Root path shows the Login page */}
         <Route path="/login" element={<Login />} /> {/* Login page */}
-        <Route path="/signup" element={<CreateAccountForm />} /> {/* Signup/Create Account form */}
+        <Route path="/signup" element={<TabContainer />} /> {/* TabContainer for sign-up */}
         <Route path="/landingpage" element={<LandingPage />} /> {/* Landing page for employees */}
         <Route path="/employerdashboard" element={<EmployerDashboard />} /> {/* Employer dashboard */}
       </Routes>
@@ -21,7 +23,4 @@ const App: React.FC = () => {
 
 export default App;
 
-
-
-
-export {};
+export{}
