@@ -1,11 +1,12 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Login from './components/Login';
-import LandingPage from './components/LandingPage';  
-import CreateAccountForm from './components/CreateAccountForm';  
-import SignupForm from './components/SignupForm';  
-import EmployerDashboard from './components/EmployerDashboard';  
-import TabContainer from './components/TabContainer';  // Import TabContainer
+import LandingPage from './components/LandingPage';
+import CreateAccountForm from './components/CreateAccountForm';
+import SignupForm from './components/SignupForm';
+import EmployerDashboard from './components/EmployerDashboard';
+import TabContainer from './components/TabContainer';
+import DisabilityForm from './components/DisabilityForm'; // Import DisabilityForm
 
 const App: React.FC = () => {
   return (
@@ -16,6 +17,7 @@ const App: React.FC = () => {
         <Route path="/signup" element={<TabContainer />} /> {/* TabContainer for sign-up */}
         <Route path="/landingpage" element={<LandingPage />} /> {/* Landing page for employees */}
         <Route path="/employerdashboard" element={<EmployerDashboard />} /> {/* Employer dashboard */}
+        <Route path="/disability-form" element={<DisabilityForm />} /> {/* Disability form page */}
       </Routes>
     </Router>
   );

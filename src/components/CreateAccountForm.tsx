@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './CreateAccountForm.css';
 
 const CreateAccountForm: React.FC = () => {
@@ -11,6 +12,7 @@ const CreateAccountForm: React.FC = () => {
         portfolio: '',
         resume: null as File | null
     });
+    const navigate = useNavigate();
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         const { name, value } = e.target;
@@ -19,14 +21,14 @@ const CreateAccountForm: React.FC = () => {
 
     const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         if (e.target.files && e.target.files[0]) {
-            setFormData(prev => ({ ...prev, resume: e.target.files![0] })); // Non-null assertion added here
+            setFormData(prev => ({ ...prev, resume: e.target.files![0] }));
         }
     };
 
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
-        // Process the form submission (e.g., send data to API)
         console.log('Form submitted:', formData);
+        navigate('/disability-form');
     };
 
     return (
