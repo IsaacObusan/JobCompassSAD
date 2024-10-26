@@ -1,0 +1,60 @@
+/* DisabilityForm.css */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f9f9f9;
+}
+
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.disability-form {
+    background-color: white;
+    border-radius: 8px;
+    padding: 30px;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.disability-form h2 {
+    margin-bottom: 20px;
+    font-size: 1.2em;
+    color: #333;
+}
+
+.disability-form label {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+    font-size: 1em;
+    color: #555;
+}
+
+.disability-form input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.disability-form button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #3c9add;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.disability-form button:hover {
+    background-color: #0056b3;
+}

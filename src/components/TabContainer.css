@@ -1,0 +1,34 @@
+.tab-container {
+    width: 100%; /* Make it responsive to the screen size */
+    max-width: 600px; /* Set a maximum width for larger screens */
+    margin: 0 auto; /* Center the container */
+    padding: 30px; /* Add more padding for better spacing */
+    border: 1px solid #ccc;
+    border-radius: 10px; /* Slightly larger border-radius for a more modern look */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional shadow for a subtle 3D effect */
+  }
+  
+  .tabs {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 25px; /* Slightly increase the margin for better separation */
+  }
+  
+  .tabs button {
+    padding: 12px 24px; /* Increase button padding for a more clickable feel */
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-size: 18px; /* Increase font size for better readability */
+  }
+  
+  .tabs .active {
+    border-bottom: 3px solid #25a6aa; /* Increase the border thickness */
+    color: #0e3e5a; /* Consistent color with the theme */
+  }
+  
+  .form-content {
+    /* Add form-specific styling if needed */
+  }
+  

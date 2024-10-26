@@ -2,16 +2,22 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Login from './components/Login';
 import LandingPage from './components/LandingPage';
-import EmployerDashboard from './components/EmployerDashboard'; // Import the EmployerDashboard component
+import CreateAccountForm from './components/CreateAccountForm';
+import SignupForm from './components/SignupForm';
+import EmployerDashboard from './components/EmployerDashboard';
+import TabContainer from './components/TabContainer';
+import DisabilityForm from './components/DisabilityForm'; // Import DisabilityForm
 
 const App: React.FC = () => {
   return (
     <Router>
       <Routes>
         <Route path="/" element={<Login />} /> {/* Root path shows the Login page */}
-        <Route path="/login" element={<Login />} />
-        <Route path="/landingpage" element={<LandingPage />} /> {/* Correct path for landing page */}
-        <Route path="/employerdashboard" element={<EmployerDashboard />} /> {/* Route for Employer Dashboard */}
+        <Route path="/login" element={<Login />} /> {/* Login page */}
+        <Route path="/signup" element={<TabContainer />} /> {/* TabContainer for sign-up */}
+        <Route path="/landingpage" element={<LandingPage />} /> {/* Landing page for employees */}
+        <Route path="/employerdashboard" element={<EmployerDashboard />} /> {/* Employer dashboard */}
+        <Route path="/disability-form" element={<DisabilityForm />} /> {/* Disability form page */}
       </Routes>
     </Router>
   );
@@ -19,4 +25,4 @@ const App: React.FC = () => {
 
 export default App;
 
-export {};
+export{}

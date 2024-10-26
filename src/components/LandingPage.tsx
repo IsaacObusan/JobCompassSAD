@@ -52,7 +52,7 @@ const LandingPage = () => {
         );
       case 'About':
         return <div className="tab-content">Learn more about us in this About section.</div>;
-      case 'Contact':
+      case 'Tutorials':
         return <div className="tab-content">Get in touch with us via the Contact section.</div>;
       default:
         return <div className="tab-content">Welcome to the Home Page!</div>;
