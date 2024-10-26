@@ -104,6 +104,17 @@ body.login-page {
   color: #117468; /* Darker color on hover */
 }
 
+.error input{
+  border: 2px solid red;
+}
+
+.error-message{
+  color: red;
+  text-align: center;
+  margin: 4px;
+  font-size: medium;
+}
+
 /* Responsive Styles */
 @media (max-width: 768px) {
   .login-container {
@@ -154,4 +165,5 @@ body.login-page {
     width: 100%; /* Full width for button on small screens */
     font-size: 0.9rem; /* Decrease button font size */
   }
+
 }

@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import './Login.css'; // Import the CSS file from the components folder
+import { voiceAssistant} from "../utils";
 
 const Login: React.FC = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [userType, setUserType] = useState<'employee' | 'employer'>('employee'); // State for user type
+  const [error, setError] = useState(false);
   const navigate = useNavigate(); // Use navigate hook to redirect
 
   useEffect(() => {
@@ -16,8 +18,11 @@ const Login: React.FC = () => {
     };
   }, []);
 
+  
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    setError(false);
 
     if (username === "admin" && password === "admin") {
       // Redirect based on user type
@@ -27,17 +32,19 @@ const Login: React.FC = () => {
         navigate("/employerdashboard"); // Redirect to Employer Dashboard
       }
     } else {
-      alert("Invalid username or password");
+      setError(true);
+      voiceAssistant("Invalid Credentials. Please enter a valid account.")
     }
   };
 
   const handleUserTypeChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setUserType(event.target.value as 'employee' | 'employer');
+    voiceAssistant(`Signing in as ${event.target.value}`)
   };
 
   return (
     <div className="login-container">
-      <div className="login-form">
+      <div className={`login-form ${error ? "error" : ""}`}>
         <img src="/Logo.png" alt="Logo" className="logo" /> {/* Left-Aligned Logo */}
         
         <p className="sign-up-caption">
@@ -88,6 +95,7 @@ const Login: React.FC = () => {
               required
             />
           </div>
+          {error && <div className="error-message">Invalid Credentials. Please enter a valid account.</div>}
           <button type="submit">Login</button>
         </form>
       </div>
